@@ -1,18 +1,15 @@
 <h1>This is the hello page.</h1>
 
-
 <%= 1 + 1 %>
 
 <br />
 
-<%# This is a great comment! just do some code here %>
-<% target = 'world' %>
+<% target = 'seb you suck at rails' %>
 
-<%# Actually concat the output %>
 <%= "Hello #{target}!" %>
 
 <br />
 
-<% 3.times do |n| %>
+<% @array.each do |n| %>
   <p><%= n %></p>
 <% end %>
