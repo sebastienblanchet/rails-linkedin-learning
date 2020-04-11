@@ -11,7 +11,7 @@ class DoNothingYet < ActiveRecord::Migration[6.0]
   def down
   end
 
-  # some other methods 
+  # some other methods
   # def {create, drop, rename}_table
   # def {add, remove, rename}_column
 
