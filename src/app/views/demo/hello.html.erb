@@ -1,15 +1,23 @@
 <h1>This is the hello page.</h1>
 
+
 <%= 1 + 1 %>
 
 <br />
 
-<% target = 'seb you suck at rails' %>
+<% target = 'world' %>
 
 <%= "Hello #{target}!" %>
 
 <br />
 
+<%# instance vars are ONE way i.e. ERB != talk back to controller %>
 <% @array.each do |n| %>
   <p><%= n %></p>
 <% end %>
+
+<br />
+
+<%# this is a router link %>
+<%# ONLY SPECIFY THE CONTROLLER IF IT IS DIFFERENT %>
+<%= link_to("Index page", {:action => 'index'}) %>
