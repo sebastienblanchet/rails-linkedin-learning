@@ -14,7 +14,8 @@ class SubjectsController < ApplicationController
 
   def create
     # Instantiate a new object using form parameters
-    @subject = Subject.new(params[:subject])
+    # mass assignement i.e all at the same time name visible position
+    @subject = Subject.new(subject_params)
     # Save the object
     if @subject.save
       # If save succeeds, redirect to the index action
@@ -36,5 +37,13 @@ class SubjectsController < ApplicationController
 
   def destroy
   end
+
+  private
+    # STRONG parameters
+    # only all them what is okay to use
+    # makes sire that we can send
+    def subject_params
+      params.require(:subject).permit(:name, :visible, :position)
+    end
 
 end

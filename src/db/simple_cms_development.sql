@@ -32,9 +32,9 @@ CREATE TABLE `subjects` (
   `created_at` datetime(6) NOT NULL,
   `updated_at` datetime(6) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO `subjects` VALUES (1,'Initial Subject',1,1,'2020-01-29 21:26:41.003381','2020-01-29 21:43:35.046935'),(2,'Next Subject',2,0,'2020-01-29 21:28:33.046879','2020-01-29 21:46:21.997805');
+INSERT INTO `subjects` VALUES (1,'Initial Subject',1,1,'2020-01-29 21:26:41.003381','2020-01-29 21:43:35.046935'),(2,'Next Subject',2,0,'2020-01-29 21:28:33.046879','2020-01-29 21:46:21.997805'),(4,'Test Subject',3,0,'2020-02-02 20:35:18.322258','2020-02-02 20:35:18.322258');
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
