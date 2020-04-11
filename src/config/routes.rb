@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     end
   end
 
+  # we have everything
   resources :pages do
     member do
       get :delete
