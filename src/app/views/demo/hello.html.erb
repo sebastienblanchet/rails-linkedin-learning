@@ -11,13 +11,17 @@
 
 <br />
 
-<%# instance vars are ONE way i.e. ERB != talk back to controller %>
 <% @array.each do |n| %>
   <p><%= n %></p>
 <% end %>
 
 <br />
 
-<%# this is a router link %>
-<%# ONLY SPECIFY THE CONTROLLER IF IT IS DIFFERENT %>
 <%= link_to("Index page", {:action => 'index'}) %>
+
+<br />
+
+ID: <%= @id %><br />
+ID: <%= params[:id] %><br />
+Page: <%= @page %><br />
+Next page: <%= @page.to_i + 1 %><br />
