@@ -11,7 +11,9 @@ CREATE TABLE `pages` (
   `updated_at` datetime(6) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_pages_on_subject_id` (`subject_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `pages` VALUES (1,1,'First Page',NULL,1,1,'This is the first page.','2020-01-30 21:06:34.713072','2020-01-30 21:06:34.713072'),(2,1,'Second Page',NULL,2,1,NULL,'2020-01-30 21:08:14.124494','2020-01-30 21:08:14.124494');
 
 DROP TABLE IF EXISTS `schema_migrations`;
 CREATE TABLE `schema_migrations` (
