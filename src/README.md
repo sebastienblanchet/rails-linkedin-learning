@@ -1,45 +1,20 @@
 # README
 
-Then install MySQL using Homebrew:
+## Init
+
+Update ruby
 
 ```bash
-$ brew install mysql
+curl -L https://get.rvm.io | bash -s stable
+rvm -v
+rvm install ruby-2.6.5
 ```
 
-Install brew services:
+## Building
+
+Start server will start on port 3000:
 
 ```bash
-$ brew tap homebrew/services 
-```
-
-Load and start the MySQL service:
-
-```bash
-$ brew services start mysql 
-```
-
-## Configure DBs
-
-Creating DB
-
-```sql
-SHOW DATABASES;
-CREATE DATABASE simple_cms_development;
-```
-
-See users and create
-```sql
-SELECT host, user FROM mysql.user;
--- user name
--- pswd
-CREATE USER 'rails_user'@'localhost' IDENTIFIED BY 'rails_user;
-```
-
-<!-- https://www.a2hosting.ca/kb/developer-corner/mysql/managing-mysql-databases-and-users-from-the-command-line -->
-
-Granting privileges
-```sql
-SHOW GRANTS FOR 'rails_user'@'localhost';
--- GRANT ALL PRIVILEGES ON {dbName}.* TO '{userName}'@'localhost';
-GRANT ALL PRIVILEGES ON simple_cms_development.* TO 'rails_user'@'localhost';
+bundle install
+rails server
 ```
