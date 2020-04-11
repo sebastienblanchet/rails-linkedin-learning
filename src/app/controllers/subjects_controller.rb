@@ -1,4 +1,3 @@
-# rails generate controller Subjects index show new edit delete
 class SubjectsController < ApplicationController
 
   def index

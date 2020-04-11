@@ -1,4 +1,3 @@
-# rails generate controller Pages index show new edit delete
 class PagesController < ApplicationController
 
   def index

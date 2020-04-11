@@ -1,16 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'pages/index'
-  get 'pages/show'
-  get 'pages/new'
-  get 'pages/edit'
-  get 'pages/delete'
-
-  get 'subjects/index'
-  get 'subjects/show'
-  get 'subjects/new'
-  get 'subjects/edit'
-  get 'subjects/delete'
 
   root 'demo#index'
 
@@ -19,11 +8,24 @@ Rails.application.routes.draw do
   get 'demo/about'
   get 'demo/contact'
 
-  #default route
-  #get ':controller(/:action(/:id))'
+  # using ressourceful routes
+  # does all shows in page
+  resources :subjects do
+    # will neeed to add the delete route
+    member do
+      get :delete
+    end
 
+    # whole collection
+    collection do
+      get :expert
+    end
+  end
 
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
+  resources :pages do
+    member do
+      get :delete
+    end
+  end
 
 end
