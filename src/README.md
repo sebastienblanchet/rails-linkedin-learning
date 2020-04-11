@@ -1,20 +1,24 @@
 # README
 
-## Init
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Update ruby
+Things you may want to cover:
 
-```bash
-curl -L https://get.rvm.io | bash -s stable
-rvm -v
-rvm install ruby-2.6.5
-```
+* Ruby version
 
-## Building
+* System dependencies
 
-Start server will start on port 3000:
+* Configuration
 
-```bash
-bundle install
-rails server
-```
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
