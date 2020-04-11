@@ -3,23 +3,10 @@
 <div class="subjects edit">
   <h2>Update Subject</h2>
 
-  <%# RAILS WILL KNOW THIS IS A PATCH METHODS %>
   <%= form_for(@subject) do |f| %>
 
-    <table summary="Subject form fields">
-      <tr>
-        <th>Name</th>
-        <td><%= f.text_field(:name) %></td>
-      </tr>
-      <tr>
-        <th>Position</th>
-        <td><%= f.text_field(:position) %></td>
-      </tr>
-      <tr>
-        <th>Visible</th>
-        <td><%= f.text_field(:visible) %></td>
-      </tr>
-    </table>
+    <%# essentially this is like components locals hash are local vars for partial%>
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
 
     <div class="form-buttons">
       <%= f.submit("Update Subject") %>

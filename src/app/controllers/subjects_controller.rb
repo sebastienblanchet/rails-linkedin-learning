@@ -13,7 +13,7 @@ class SubjectsController < ApplicationController
   end
 
   def create
-  # Instantiate a new object uesing form parameters
+    # Instantiate a new object using form parameters
     @subject = Subject.new(subject_params)
     # Save the object
     if @subject.save
@@ -26,7 +26,6 @@ class SubjectsController < ApplicationController
   end
 
   def edit
-    # edit and show are relivately the same
     @subject = Subject.find(params[:id])
   end
 
