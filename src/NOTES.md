@@ -1,7 +1,13 @@
 # Notes
 
+Generating migrations
 
 ```bash
-# this will test rails connecting to DB as defined using in config/database.yml
-rails db:schema:dump
+rails generate migration MigrationName
+```
+
+or
+
+```bash
+rails generate model ModelName
 ```
