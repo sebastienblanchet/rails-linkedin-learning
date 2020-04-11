@@ -63,4 +63,10 @@ mysql> SELECT * FROM schema_migrations
 +----------------+
 2 rows in set (0.00 sec)
 ```
+
+<!-- IF you make mistakes just do a down and re run migration -->
 Reverting migrations (DOWN):
+
+```bash
+rails db:migrate VERSION=0
+```

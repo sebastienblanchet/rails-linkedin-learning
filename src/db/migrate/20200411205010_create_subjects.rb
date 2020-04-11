@@ -1,3 +1,4 @@
+# λ rails generate model CreatePages name:string position:integer visible:boolean
 class CreateSubjects < ActiveRecord::Migration[6.0]
   def change
     create_table :subjects do |t|
