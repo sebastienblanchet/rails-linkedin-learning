@@ -38,10 +38,16 @@ class SubjectsController < ApplicationController
     end
   end
 
+  # DELETE WILL GO NEXT TO DESTROY
   def delete
+    @subject = Subject.find(params[:id])
   end
 
   def destroy
+    @subject = Subject.find(params[:id])
+    @subject.destroy
+    # go back to the list
+    redirect_to(subjects_path)
   end
 
   private

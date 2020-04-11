@@ -5,7 +5,6 @@
 
   <%= form_for(@subject) do |f| %>
 
-    <%# essentially this is like components locals hash are local vars for partial%>
     <%= render(:partial => 'form', :locals => {:f => f}) %>
 
     <div class="form-buttons">
