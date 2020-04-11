@@ -13,8 +13,7 @@ class SubjectsController < ApplicationController
   end
 
   def create
-    # Instantiate a new object using form parameters
-    # mass assignement i.e all at the same time name visible position
+  # Instantiate a new object uesing form parameters
     @subject = Subject.new(subject_params)
     # Save the object
     if @subject.save
@@ -27,9 +26,17 @@ class SubjectsController < ApplicationController
   end
 
   def edit
+    # edit and show are relivately the same
+    @subject = Subject.find(params[:id])
   end
 
   def update
+    @subject = Subject.find(params[:id])
+    if @subject.update(subject_params)
+      redirect_to(subject_path(@subject))
+    else
+      render('edit')
+    end
   end
 
   def delete
@@ -39,9 +46,7 @@ class SubjectsController < ApplicationController
   end
 
   private
-    # STRONG parameters
-    # only all them what is okay to use
-    # makes sire that we can send
+
     def subject_params
       params.require(:subject).permit(:name, :visible, :position)
     end
