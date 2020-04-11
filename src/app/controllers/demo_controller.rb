@@ -7,15 +7,8 @@ class DemoController < ApplicationController
   end
 
   def hello
-    # does this automatically
     # render('hello')
-
-    # pass in controller
-    # goes to routes.rb and determine
-    redirect_to(:controller => 'demo', :action => 'index')
-    # (:action => 'index')
-    # could aslso
-    # redirect_to('https://github.com')
+    # redirect_to(:controller => 'demo', :action => 'index')
   end
 
 end
